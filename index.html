@@ -1,0 +1,142 @@
+<html>
+  <head>
+    
+    <style>
+
+/* Geral */
+
+/* Aqui, em Geral, "$boL, boR top" atua só na tela deitada. Se esta propriedade top n for declara a tela deitada (somente) fica doida. Creio q isso acontece pq há elementos com position absolute" */
+#boL, #boR {
+position: absolute;
+top: 25%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#boL button, #boR button {
+  width: 3em;
+  height: 3em;
+}
+
+body {
+    background-color: lightgreen;
+  }
+  
+div {
+  //background-color: lightsalmon;
+  height: 109%;
+}
+
+
+
+/* @media */
+/* Perceba que este "@medi" funciona como uma estrutura "if". Ou seja, se tela celular está em pé as propriedades CSS são 'x' senão são 'y'. */
+@media all and (max-width: 600px) {
+  
+  body {
+    background-color: lightblue;
+  }
+
+div {
+  background-color: lightsalmon;
+  height: 33%;
+}
+
+#boL, #boR {
+position: absolute;
+top: 66%;
+}
+
+#boL {
+background-color: red;
+}
+
+#boR {
+background-color: green;
+right: 0em;
+}
+    
+  }
+
+
+
+
+/* Atua em ambas as telas. */
+
+#boL button, #boR button {
+  background-color: orange;
+}
+
+#boL, #boR {
+  background-color: black;
+  padding: 0.2em 0em 0.2em 0em;
+}
+
+#boL {
+border-radius: 0em 1em 1em 0em;
+}
+
+#boR {
+border-radius: 1em 0em 0em 1em;
+right: 0em;
+}
+
+div {
+  border-radius: 1em;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/12189486_-_Niter%C3%B3i_-_Rio_de_Janeiro_-_RJ_-_Brazil.jpg/640px-12189486_-_Niter%C3%B3i_-_Rio_de_Janeiro_-_RJ_-_Brazil.jpg");
+}
+
+.boTxt {
+  color: pink;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+   
+    </style>
+  
+  </head>
+  <body>
+    
+<aside id="boL">
+  <p class="boTxt">Texto</p>
+  <button>a</button>
+  <button>b</button> 
+  <br>
+  <button>c</button>
+  <button>d</button>
+  <br>
+  <button>e</button>
+  <button>f</button>
+  <br>
+  <button>g</button>
+  <button>h</button>
+</aside>
+<div>Box 2</div>
+<aside id="boR">
+  <p class="boTxt">Texto</p>
+  <button>A</button>
+  <button>B</button>
+  <button>C</button>
+  <button>D</button>
+  <br>
+  <button>E</button>
+  <button>F</button>
+  <button>G</button>
+  <button>H</button>
+  <br>
+  <button>I</button>
+  <button>J</button>
+  <button>K</button>
+  <button>L</button>
+  <br>
+  <button>M</button>
+  <button>N</button>
+  <button>O</button>
+  <button>P</button>
+</aside>
+    
+  </body>
+</html>
